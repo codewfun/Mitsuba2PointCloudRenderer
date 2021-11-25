@@ -5,7 +5,7 @@ import Imath
 from PIL import Image
 from plyfile import PlyData, PlyElement
 
-PATH_TO_MITSUBA2 = "/home/tolga/Codes/mitsuba2/build/dist/mitsuba"  # mitsuba exectuable
+PATH_TO_MITSUBA2 = "/data/workspace/tools/mitsuba2/build/dist/mitsuba"  # mitsuba exectuable
 
 # replaced by command line arguments
 # PATH_TO_NPY = 'pcl_ex.npy' # the tensor to load
@@ -33,14 +33,14 @@ xml_head = \
             <rfilter type="gaussian"/>
         </film>
     </sensor>
-    
+
     <bsdf type="roughplastic" id="surfaceMaterial">
         <string name="distribution" value="ggx"/>
         <float name="alpha" value="0.05"/>
         <float name="intIOR" value="1.46"/>
         <rgb name="diffuseReflectance" value="1,1,1"/> <!-- default 0.5 -->
     </bsdf>
-    
+
 """
 
 # I also use a smaller point size
@@ -66,7 +66,7 @@ xml_tail = \
             <translate x="0" y="0" z="-0.5"/>
         </transform>
     </shape>
-    
+
     <shape type="rectangle">
         <transform name="toWorld">
             <scale x="10" y="10" z="1"/>
